@@ -8,9 +8,11 @@ public class Controller {
 	
 	Puzzle solvedPuzzle;
 	Puzzle displayPuzzle;
-	buttonAdapter puzButtons;
+	PuzzleButtons puzButtons;
 	BottomPanel panelButtons;
 	int numberSet;
+	boolean showPos;
+	boolean delPos;
 	
 	public Controller(){
 		numberSet = 1;
@@ -18,7 +20,8 @@ public class Controller {
 		int puzImportanceToShow = 1;
 		solvedPuzzle = new Puzzle(this);
 		displayPuzzle = new Puzzle(this);
-		
+		showPos = false;
+		delPos = false;
 		this.givens(puzNumbers, solvedPuzzle);
 		this.givens(puzNumbers, displayPuzzle);
 		
